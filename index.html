@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Productivio</title>
+    <!--SEO-->
+    <meta name="description" content="Productivio" />
+    <meta name="keywords" content="Productivio" />
+    <!-- OG Tags -->
+    <meta property="og:title" content="Productivio" />
+    <meta property="og:description" content="Productivio" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="img/head/preview.png" />
+    <meta property="og:site_name" content="Productivio" />
+    <!-- Styling -->
+    <meta name="theme-color" content="#F2718E" />
+    <link rel="apple-touch-icon" href="img/head/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="img/head/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="main hidden">
+        <div class="main__container">
+          <div class="content content-left">
+            <div class="content__welcome welcome">
+              <h1 class="welcome__title">Hello, !</h1>
+              <div class="welcome__progress-bar progress-bar">
+                <h3 class="progress-bar__title">Done:</h3>
+                <div class="progress-bar__progress">
+                  <span
+                    class="progress-bar__percentage"
+                    data-width=""
+                    id="progress-bar"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="content__todo todo">
+              <h2 class="todo__title subtitle">To-Do List</h2>
+
+              <div class="todo__input-group">
+                <input
+                  class="todo__input"
+                  type="text"
+                  id="todo-input"
+                  placeholder="Enter the task"
+                />
+
+                <div class="todo__select select">
+                  <div class="select__selected">Priority</div>
+                  <ul class="select__items">
+                    <li class="select__item" data-value="high">High</li>
+                    <li class="select__item" data-value="personal">Personal</li>
+                    <li class="select__item" data-value="low">Low</li>
+                    <li class="select__item" data-value="hobby">Hobby</li>
+                  </ul>
+                </div>
+
+                <button class="todo__add-button" id="todo-add">Add</button>
+              </div>
+
+              <ul class="todo__list" id="todo-list">
+                <!-- <li class="todo__item">
+                  <label class="todo__checkbox">
+                    <input type="checkbox" />
+                    <span class="todo__checkmark"></span>
+                  </label>
+                  <span class="todo__text">Sample Task</span>
+                  <span class="todo__priority todo__priority--high">High</span>
+                  <button class="todo__delete" aria-label="Delete task">
+                    &times;
+                  </button>
+                </li> -->
+              </ul>
+            </div>
+
+            <div class="content__input-notes notes-input">
+              <input
+                type="text"
+                class="notes-input__input"
+                id="notes-input"
+                placeholder="Add a note..."
+              />
+              <button class="notes-input__button" id="notes-add">Add</button>
+            </div>
+            <div class="content__notes notes">
+              <h2 class="notes__title subtitle">Notes</h2>
+              <div class="note__list" id="note-list">
+                <!-- Сюди будуть додаватися нотатки -->
+              </div>
+            </div>
+          </div>
+          <div class="content content-right">
+            <div class="content__pomodoro pomodoro">
+              <h2 class="pomodoro__title subtitle">Timer Pomodoro</h2>
+              <div class="pomodoro__options">
+                <button class="pomodoro__option active" id="pomodoro-sesion">
+                  Pomodoro
+                </button>
+                <button class="pomodoro__option" id="short-break">
+                  Short Break
+                </button>
+                <button class="pomodoro__option" id="long-break">
+                  Long Break
+                </button>
+              </div>
+              <div class="pomodoro__main">
+                <div
+                  id="pomodoro-timer"
+                  class="pomodoro__timer-display"
+                  data-duration="25:00"
+                >
+                  <h3 class="pomodoro__subtitle">25:00</h3>
+                </div>
+                <div
+                  id="short-timer"
+                  class="pomodoro__timer-display"
+                  data-duration="5:00"
+                >
+                  <h3 class="pomodoro__subtitle">5:00</h3>
+                </div>
+                <div
+                  id="long-timer"
+                  class="pomodoro__timer-display"
+                  data-duration="10:00"
+                >
+                  <h3 class="pomodoro__subtitle">10:00</h3>
+                </div>
+              </div>
+              <div class="pomodoro__buttons">
+                <button class="pomodoro__start pomodoro__button" id="start">
+                  START
+                </button>
+                <button class="pomodoro__stop pomodoro__button" id="stop">
+                  STOP
+                </button>
+                <button class="pomodoro__reset pomodoro__button" id="reset">
+                  RESET
+                </button>
+              </div>
+            </div>
+            <div class="content__mood mood-tracker">
+              <h2 class="mood-tracker__title subtitle">Mood tracker</h2>
+              <h3 class="mood-tracker__subtitle">Select your current mood:</h3>
+              <div class="mood-tracker__options">
+                <button data-mood="Happy">
+                  <img src="img/mood/happy.svg" alt="happy" />
+                </button>
+                <button data-mood="Neutral">
+                  <img src="img/mood/neutral.svg" alt="neutral" />
+                </button>
+                <button data-mood="Sad">
+                  <img src="img/mood/sad.svg" alt="sad" />
+                </button>
+                <button data-mood="Angry">
+                  <img src="img/mood/angry.svg" alt="angry" />
+                </button>
+                <button data-mood="Excited">
+                  <img src="img/mood/excited.svg" alt="excited" />
+                </button>
+              </div>
+              <p class="mood-tracker__current" style="margin-top: 10px"></p>
+              <button id="history-button" class="mood-tracker__history">
+                Your Mood History:
+              </button>
+              <canvas id="moodChart" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="auth-modal">
+      <div class="modal__content">
+        <h2>Welcome! Enter your name:</h2>
+        <input type="text" id="username-input" placeholder="Your name" />
+        <div id="auth-error" style="color: red; margin: 5px 0"></div>
+        <button id="save-username">Continue</button>
+      </div>
+    </div>
+    <div id="preloader" style="display: flex">
+      <div class="spinner"></div>
+    </div>
+    <script src="js/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/moodtracker.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/pomodoro.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/progressBar.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
